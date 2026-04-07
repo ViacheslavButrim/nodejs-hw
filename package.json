@@ -12,7 +12,11 @@
     "type": "git",
     "url": "git+https://github.com/ViacheslavButrim/nodejs-hw.git"
   },
-  "keywords": ["nodejs", "express", "api"],
+  "keywords": [
+    "nodejs",
+    "express",
+    "api"
+  ],
   "author": "Viacheslav Butrim <viacheslavbutrim@gmail.com>",
   "license": "ISC",
   "bugs": {
@@ -26,8 +30,11 @@
     "pino-http": "^11.0.0"
   },
   "devDependencies": {
+    "@eslint/js": "^10.0.1",
     "eslint": "^10.2.0",
+    "globals": "^17.4.0",
     "nodemon": "^3.1.14",
+    "pino-pretty": "^13.1.3",
     "prettier": "^3.8.1"
   }
 }
