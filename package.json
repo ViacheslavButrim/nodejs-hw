@@ -1,0 +1,33 @@
+{
+  "name": "nodejs-hw",
+  "version": "1.0.0",
+  "description": "Express app for notes API",
+  "type": "module",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ViacheslavButrim/nodejs-hw.git"
+  },
+  "keywords": ["nodejs", "express", "api"],
+  "author": "Viacheslav Butrim <viacheslavbutrim@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ViacheslavButrim/nodejs-hw/issues"
+  },
+  "homepage": "https://github.com/ViacheslavButrim/nodejs-hw#readme",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.1",
+    "express": "^5.2.1",
+    "pino-http": "^11.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^10.2.0",
+    "nodemon": "^3.1.14",
+    "prettier": "^3.8.1"
+  }
+}
