@@ -13,7 +13,6 @@ import { errorHandler } from "./middleware/errorHandler.js";
 
 import authRoutes from "./routes/authRoutes.js";
 import notesRoutes from "./routes/notesRoutes.js";
-import { authenticate } from "./middleware/authenticate.js";
 
 const app = express();
 
@@ -33,9 +32,8 @@ app.use(
 app.use(express.json());
 app.use(cookieParser());
 
-app.use("/auth", authRoutes);
-
-app.use("/notes", authenticate, notesRoutes);
+app.use(authRoutes);
+app.use(notesRoutes);
 
 app.use(notFoundHandler);
 

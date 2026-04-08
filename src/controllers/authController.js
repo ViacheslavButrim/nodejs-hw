@@ -1,5 +1,5 @@
 import createHttpError from "http-errors";
-import bcrypt from "bcryptjs";
+import bcrypt from "bcrypt";
 import { User } from "../models/user.js";
 import { Session } from "../models/session.js";
 import { createSession, setSessionCookies } from "../services/auth.js";
@@ -47,13 +47,15 @@ export const loginUser = async (req, res, next) => {
 export const refreshUserSession = async (req, res, next) => {
   try {
     const { sessionId, refreshToken } = req.cookies;
-    if (!sessionId || !refreshToken) throw createHttpError(401, "Session not found");
+    if (!sessionId || !refreshToken)
+      throw createHttpError(401, "Session not found");
 
     const session = await Session.findById(sessionId);
     if (!session || session.refreshToken !== refreshToken)
       throw createHttpError(401, "Session not found");
 
-    if (session.refreshTokenValidUntil < new Date()) throw createHttpError(401, "Session token expired");
+    if (session.refreshTokenValidUntil < new Date())
+      throw createHttpError(401, "Session token expired");
 
     await session.deleteOne();
 
