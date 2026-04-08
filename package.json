@@ -24,14 +24,17 @@
   },
   "homepage": "https://github.com/ViacheslavButrim/nodejs-hw#readme",
   "dependencies": {
+    "bcryptjs": "^3.0.3",
     "celebrate": "^15.0.3",
+    "cookie-parser": "^1.4.7",
     "cors": "^2.8.6",
     "dotenv": "^17.4.1",
     "express": "^5.2.1",
     "http-errors": "^2.0.1",
     "joi": "^18.1.2",
     "mongoose": "^9.4.1",
-    "pino-http": "^11.0.0"
+    "pino-http": "^11.0.0",
+    "uuid": "^13.0.0"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
