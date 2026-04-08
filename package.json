@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/ViacheslavButrim/nodejs-hw#readme",
   "dependencies": {
+    "bcrypt": "^6.0.0",
     "bcryptjs": "^3.0.3",
     "celebrate": "^15.0.3",
     "cookie-parser": "^1.4.7",
