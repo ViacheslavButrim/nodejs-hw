@@ -1,3 +1,4 @@
+import { errors } from "celebrate";
 import dotenv from "dotenv";
 dotenv.config();
 
@@ -22,6 +23,7 @@ app.use(express.json());
 app.use(notesRoutes);
 
 app.use(notFoundHandler);
+app.use(errors());
 app.use(errorHandler);
 
 app.listen(PORT, () => {
