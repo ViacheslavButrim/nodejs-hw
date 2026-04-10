@@ -5,6 +5,10 @@ const userSchema = new mongoose.Schema(
     username: { type: String, trim: true },
     email: { type: String, required: true, unique: true, trim: true },
     password: { type: String, required: true, minlength: 8 },
+    avatar: {
+      type: String,
+      default: "https://res.cloudinary.com/demo/image/upload/v1312461204/sample.jpg",
+    },
   },
   { timestamps: true }
 );
